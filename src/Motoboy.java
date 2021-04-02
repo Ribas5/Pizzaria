@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Motoboy extends Entregador {
 	private String CNH;
@@ -8,6 +9,7 @@ public class Motoboy extends Entregador {
 
 	public void setCNH(String cNH) {
 		CNH = cNH;
-	} 
+	}
+
 	 
 }

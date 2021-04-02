@@ -1,5 +1,7 @@
 
+
 public class Cozinheiro extends Funcionario {
+
 	public boolean fazerPedido() {
 		return false;
 	}

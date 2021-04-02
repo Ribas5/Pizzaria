@@ -11,4 +11,10 @@ public abstract class Entregador extends Funcionario {
 	public void setListaPedidos(ArrayList<Pedido> listaPedidos) {
 		this.listaPedidos = listaPedidos;
 	}
+	
+	public void entregarPedido(ArrayList<Pedido> listPe) {
+		for(int i= 0; i< listPe.size(); i++) {
+			listPe.get(i).setEntregue(true);
+		}
+	}
 }
