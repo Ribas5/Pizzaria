@@ -1,6 +1,6 @@
 
-public class Motoboy {
-	 private String CNH;
+public class Motoboy extends Entregador {
+	private String CNH;
 
 	public String getCNH() {
 		return CNH;
