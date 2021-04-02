@@ -1,15 +1,16 @@
-import java.util.ArrayList;
-
 public class Motoboy extends Entregador {
-	private String CNH;
+	private String cnh;
+	
+	public Motoboy(String nome, double salario, int idade, String telefone, String cnh) {
+		super(nome, salario, idade, telefone);
+		this.cnh = cnh;
+	}
 
 	public String getCNH() {
-		return CNH;
+		return this.cnh;
 	}
 
 	public void setCNH(String cNH) {
-		CNH = cNH;
+		this.cnh = cNH;
 	}
-
-	 
 }

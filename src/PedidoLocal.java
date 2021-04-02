@@ -1,10 +1,11 @@
 
 public class PedidoLocal extends Pedido {
-	public PedidoLocal(Cliente c) {
-		super(c);
-	}
-
 	private int numMesa;
+	
+	public PedidoLocal(Cliente c, int numMesa) {
+		super(c);
+		this.numMesa = numMesa;
+	}
 
 	public int getNumMesa() {
 		return numMesa;
@@ -22,6 +23,4 @@ public class PedidoLocal extends Pedido {
 		}
 		return valor;
 	}
-	
-
 }

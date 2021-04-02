@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Pedido {
 	private static int incrementaId = 0;
@@ -9,8 +8,7 @@ public abstract class Pedido {
 	private boolean entregue;
 	
 	public Pedido(Cliente c) {
-		incrementaId ++;
-		id = incrementaId;
+		id = incrementaId++;
 		this.listaPizza = new ArrayList<Pizza>();
 		this.c = c;
 	}
@@ -37,16 +35,25 @@ public abstract class Pedido {
 	public void setEntregue(boolean entregue) {
 		this.entregue = entregue;
 	}
-
+	
+	public boolean isPreparada() {
+		if(!this.listaPizza.isEmpty()) {
+			boolean preparado = true;
+			for (int i = 0; i < this.listaPizza.size(); i++) {
+				if (!this.listaPizza.get(i).isPreparada()) {
+					preparado = false;
+				}
+			}
+			return preparado;
+		}
+		return false;
+	}
 
 	public Cliente getC() {
 		return c;
 	}
 
-
 	public void setC(Cliente c) {
 		this.c = c;
 	}
-	
-	
 }

@@ -1,12 +1,12 @@
 
 public class Cliente {
-	private static int contaId=0;
+	private static int contaId = 0;
 	private int id;
 	private String endereco;
 	private String nome;
 	
 	public Cliente(String nome, String endereco) {
-		contaId ++;
+		contaId++;
 		this.id = contaId;
 		this.endereco = endereco;
 		this.nome = nome;
