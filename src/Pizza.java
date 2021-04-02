@@ -3,7 +3,13 @@ public class Pizza {
 	private String sabor;
 	private char tamanho;
 	private double valor;
-	private boolean preparada;
+	private boolean preparada = false;
+	
+	public Pizza(String sabor, char tamanho, double valor ) {
+		this.sabor = sabor;
+		this.tamanho = tamanho;
+		this.valor = valor;
+	}
 	
 	public String getSabor() {
 		return sabor;
