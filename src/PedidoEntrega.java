@@ -1,5 +1,5 @@
 
-public class PedidoEntrega {
+public class PedidoEntrega extends Pedido {
 	private String endereco;
 	private double taxaEntrega;
 	
