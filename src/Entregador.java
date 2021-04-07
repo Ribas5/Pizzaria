@@ -20,10 +20,17 @@ public abstract class Entregador extends Funcionario {
 	}
 	
 	public void entregarPedido(int idPedido) {
+		boolean entregue = false;
 		for(int i= 0; i< this.listaPedidos.size(); i++) {
 			if (this.listaPedidos.get(i).getId() == idPedido && this.listaPedidos.get(i).isPreparada()) {
 				this.listaPedidos.get(i).setEntregue(true);
+				System.out.println("O pedido foi entregue na residencia correta");
+				entregue = true;
 			}
 		}
+		if(!entregue) {
+			System.out.println("Esse pedido já foi entregue ou não existe para esse entregador.");
+		}
+		
 	}
 }

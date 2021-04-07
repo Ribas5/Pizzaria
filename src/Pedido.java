@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public abstract class Pedido {
-	private static int incrementaId = 0;
+	private static int incrementaId = 1;
 	private int id;
 	private ArrayList<Pizza> listaPizza;
 	Cliente c;
