@@ -1,5 +1,7 @@
+package funcionario;
+
 public abstract class Funcionario {
-	private static int incrementaId = 0;
+	private static int incrementaId = 1;
 	protected int id = 0;
 	protected String nome;
 	protected double salario;

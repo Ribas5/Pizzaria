@@ -1,4 +1,6 @@
+package pedido;
 import java.util.ArrayList;
+import cliente.Cliente;
 
 public abstract class Pedido {
 	private static int incrementaId = 1;
@@ -13,7 +15,9 @@ public abstract class Pedido {
 		this.c = c;
 	}
 	
+	
 	public abstract double getValor();
+	
 	
 	public int getId() {
 		return id;
@@ -24,17 +28,21 @@ public abstract class Pedido {
 		return listaPizza;
 	}
 	
+	
 	public void setListaPizza(ArrayList<Pizza> listaPizza) {
 		this.listaPizza = listaPizza;
 	}
+	
 	
 	public boolean isEntregue() {
 		return entregue;
 	}
 	
+	
 	public void setEntregue(boolean entregue) {
 		this.entregue = entregue;
 	}
+	
 	
 	public boolean isPreparada() {
 		if(!this.listaPizza.isEmpty()) {

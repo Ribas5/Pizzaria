@@ -1,13 +1,13 @@
+package cliente;
 
 public class Cliente {
-	private static int contaId = 0;
+	private static int incrementaId = 1;
 	private int id;
 	private String endereco;
 	private String nome;
 	
 	public Cliente(String nome, String endereco) {
-		contaId++;
-		this.id = contaId;
+		this.id = incrementaId++;
 		this.endereco = endereco;
 		this.nome = nome;
 		

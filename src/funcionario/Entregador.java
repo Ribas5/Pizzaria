@@ -1,4 +1,6 @@
+package funcionario;
 import java.util.ArrayList;
+import pedido.*;
 
 public abstract class Entregador extends Funcionario {
 	public Entregador(String nome, double salario, int idade, String telefone) {
@@ -19,18 +21,22 @@ public abstract class Entregador extends Funcionario {
 		this.listaPedidos.add(p);
 	}
 	
-	public void entregarPedido(int idPedido) {
-		boolean entregue = false;
+	public Pedido getPedido(int idPedido) {
+		for(int i= 0; i< this.listaPedidos.size(); i++) {
+			if (this.listaPedidos.get(i).getId() == idPedido) {
+				return this.listaPedidos.get(i);
+			}
+		}
+		return null;
+	}
+	
+	public boolean entregarPedido(int idPedido) {
 		for(int i= 0; i< this.listaPedidos.size(); i++) {
 			if (this.listaPedidos.get(i).getId() == idPedido && this.listaPedidos.get(i).isPreparada()) {
 				this.listaPedidos.get(i).setEntregue(true);
-				System.out.println("O pedido foi entregue na residencia correta");
-				entregue = true;
+				return true;
 			}
 		}
-		if(!entregue) {
-			System.out.println("Esse pedido já foi entregue ou não existe para esse entregador.");
-		}
-		
+		return false;
 	}
 }

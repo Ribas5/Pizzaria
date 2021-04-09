@@ -1,3 +1,4 @@
+package funcionario;
 public class Motoboy extends Entregador {
 	private String cnh;
 	

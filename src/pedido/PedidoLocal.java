@@ -1,3 +1,5 @@
+package pedido;
+import cliente.Cliente;
 
 public class PedidoLocal extends Pedido {
 	private int numMesa;

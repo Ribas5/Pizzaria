@@ -1,3 +1,4 @@
+package pedido;
 
 public class Pizza {
 	private String sabor;

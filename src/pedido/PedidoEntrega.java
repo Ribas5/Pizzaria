@@ -1,13 +1,14 @@
+package pedido;
+import cliente.Cliente;
 
 public class PedidoEntrega extends Pedido {
-	
 	private String endereco;
 	private double taxaEntrega;
 	
-	public PedidoEntrega(Cliente c, String endereco) {
+	public PedidoEntrega(Cliente c) {
 		super(c);
 		this.taxaEntrega = 5;
-		this.endereco = endereco;
+		this.endereco = c.getEndereco();
 	}
 	
 	public String getEndereco() {

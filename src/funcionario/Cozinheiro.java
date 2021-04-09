@@ -1,4 +1,6 @@
+package funcionario;
 import java.util.ArrayList;
+import pedido.*;
 
 public class Cozinheiro extends Funcionario {
 
