@@ -90,7 +90,6 @@ public class Pizzaria {
 				char tamanho = s.next().charAt(0);
 				System.out.println("Indique o valor da pizza: ");
 				double valor = s.nextDouble();
-				System.out.println("Pizza");
 				listaPizza.add(new Pizza(sabor, tamanho, valor));
 				System.out.println("Pizza "+ ++n +" anotada com sucesso!");
 				op = 'a';
